@@ -1,3 +1,4 @@
+/*The tree node has data, left child and right child 
 class Node {
     int data;
     Node* left;
@@ -6,8 +7,8 @@ class Node {
 
 */
     int height(Node* root) {  
-        if(!root) return 0;
-        return 0-max(height(root->left) ,height(root->right));
+        if(root == NULL) return -1;
+        return max(height(root->left) ,height(root->right)) +1 ;
        
         
     }
