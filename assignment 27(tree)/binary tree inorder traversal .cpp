@@ -5,16 +5,18 @@ public:
         stack<TreeNode*> S;
         while(root!=NULL || !S.empty()){
             if(root!=NULL){
-                p.push_back(left->val);
+                // p.push_back(root->val);
                 S.push(root);
-                left=root->left;
+                root=root->left;
             }
-            else{
+            else {
                 root=S.top();
                 S.pop();
-                root=root->left;
+                p.push_back(root->val);
+                root=root->right;
             }
         }
         return p;
     }
 };
+
