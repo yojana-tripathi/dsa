@@ -1,16 +1,8 @@
 class Solution {
-    public :
-  int maxProduct(int[] nums) {
-        int n = Integer.MIN_VALUE;;
-        int m = Integer.MIN_VALUE;;
-        for (int i : nums) {
-            if (i >= n) {
-                m = n;
-                n = i;
-            } else if (i >= m) {
-                m = i;
-            }
-        }
-        return (--n) * (--m);
+public:
+    int maxProduct(vector<int>& nums) {
+        int n=nums.size()-1;
+        sort(nums.begin(), nums.end());
+        return(nums[n]-1)*(nums[n-1]-1);
     }
 };
