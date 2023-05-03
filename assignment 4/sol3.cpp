@@ -16,3 +16,19 @@ public:
    
     
 };
+
+second solution 
+class Solution {
+public:
+    int subtractProductAndSum(int n) {
+        int sum = 0, p = 1, digit;
+        while(n>0){
+            digit = n%10;
+                sum = sum +digit;
+                p = p *digit;
+                n = n/10;
+        }
+        return p-sum;
+        
+    }
+};
